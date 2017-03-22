@@ -2,8 +2,9 @@ use std::fs::File;
 use std::io::prelude::*;
 
 fn main() {
-    println!("File Sample!!");
+    let file_name = "test.txt";
+    println!("Output File {}", file_name);
 
-    let mut file = File::create("sample02.txt")?;
-    file.write_all(b"Hello Rust!!")?;
+    let mut file = File::create(file_name).unwrap();
+    file.write_all(b"Hello Rust!!").unwrap();
 }
