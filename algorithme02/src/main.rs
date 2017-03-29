@@ -25,6 +25,8 @@ fn middle(a:i32, b:i32, c:i32)-> i32{
     if a >= b {
         if b >= c {
             mid = b;
+        }else if a <= c{
+            mid = a;
         }
     }
     else if a > c {
